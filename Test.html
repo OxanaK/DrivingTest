@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <!--<link rel="stylesheet" href="fonts/ionicons.css">-->
+    <link rel="stylesheet" href="indexTest.css">
+</head>
+<body>
+    <section class="wrapper">
+
+        <div class="div_h1">test your</div>
+        <div class="div_h2">KNOWLEDGE</div>
+
+        <div class="col1 bg_color_green"></div>
+
+        <div class="col2 bg_color_pg1"></div>
+        <div class="col2 bg_color_pg2"></div>
+        <div class="col2 bg_color_pg3"></div>
+        <div class="col2 bg_color_pg4"></div>
+        <div class="col2 bg_color_pg5"></div>
+        <div class="col1 bg_color_pg6"></div>
+        <div class="col1 bg_color_pg7"></div>
+        <div class="col1 bg_color_pg8"></div>
+        <div class="col1 bg_color_pg9"></div>
+        <div class="col1 bg_color_pg10"></div>
+        <div class="col1 bg_color_pg11"></div>
+        <div class="col1 bg_color_pg12"></div>
+        <div class="col1 bg_color_pg13"></div>
+        <div class="col1 bg_color_pg14"></div>
+        <div class="col2 bg_color_pg15"></div>
+        <div class="col2 bg_color_pg16"></div>
+        <div class="col2 bg_color_pink"></div>
+
+        <div class="warning hidden" id="warning">Select your answer first!</div>
+
+        <input type="submit" id="submit_but"  />
+        <label class="sub but_sun_next show" id="sub" for="submit_but" onclick="submit();">submit</label>
+
+        <input type="submit" id="next_but " />
+        <label class="next but_sun_next show" for="next_but" id="next" onclick="goNext();">next</label>
+
+        <input type="submit" id="res_but"  />
+        <label class="res but_sun_next hidden" for="res_but" id="result" onclick="getResult();" >result</label>
+
+        <input type="submit" id="retake_but"  />
+        <label class="ret but_sun_next hidden" for="retake_but" id="retake" onclick="getNewTest();">retake</label>
+
+        <div class="my_score hidden" id="0">
+            Your score is  <span class="sc">0</span>.
+        </div>
+        <div class="my_score hidden" id="1">
+            Your score is  <span class="sc">1</span>.
+        </div>
+        <div class="my_score hidden" id="2">
+            Your score is  <span class="sc">2</span>.
+        </div>
+        <div class="my_score hidden" id="3">
+            Your score is  <span class="sc">3</span>.
+        </div>
+        <div class="my_score hidden" id="4">
+            Your score is  <span class="sc">4</span>.
+        </div>
+        <div class="my_score hidden" id="5">
+            Your score is  <span class="sc">5</span>.
+        </div>
+        <div class="my_score hidden" id="6">
+            Your score is  <span class="sc">6</span>.
+        </div>
+        <div class="my_score hidden" id="7">
+            Your score is  <span class="sc">7</span>.
+        </div>
+        <div class="my_score hidden" id="8">
+            Your score is  <span class="sc">8</span>.
+        </div>
+        <div class="my_score hidden" id="9">
+            Your score is  <span class="sc">9</span>.
+        </div>
+        <div class="my_score hidden" id="10">
+            Your score is  <span class="sc">10</span>.
+        </div>
+        <div class="my_score hidden" id="11">
+            Your score is  <span class="sc">11</span>.
+        </div>
+        <div class="my_score hidden" id="12">
+            Your score is  <span class="sc">12</span>.
+        </div>
+        <div class="my_score hidden" id="13">
+            Your score is  <span class="sc">13</span>.
+        </div>
+        <div class="my_score hidden" id="14">
+            Your score is  <span class="sc">14</span>.
+        </div>
+        <div class="my_score hidden" id="15">
+            Your score is  <span class="sc">15</span>.
+        </div>
+
+        <div class="q_numner">
+            <div class="cur_number q_fall" id="box_1">1</div>
+            <div class="cur_number q_fall" id="box_2">2</div>
+            <div class="cur_number q_fall" id="box_3">3</div>
+            <div class="cur_number q_fall" id="box_4">4</div>
+            <div class="cur_number q_fall" id="box_5">5</div>
+            <div class="cur_number q_fall" id="box_6">6</div>
+            <div class="cur_number q_fall" id="box_7">7</div>
+            <div class="cur_number q_fall" id="box_8">8</div>
+            <div class="cur_number q_fall" id="box_9">9</div>
+            <div class="cur_number q_fall" id="box_10">10</div>
+            <div class="cur_number q_fall" id="box_11">11</div>
+            <div class="cur_number q_fall" id="box_12">12</div>
+            <div class="cur_number q_fall" id="box_13">13</div>
+            <div class="cur_number q_fall" id="box_14">14</div>
+            <div class="cur_number q_fall" id="box_15">15</div>
+
+        </div>
+
+        <div class="list show" data-answer="4" id="q_1">
+            <p>
+              <span id="sp">1.</span> When it looks like a collision may happen, drivers must take
+                an immediate step to
+            </p>
+            <button class="q" data-answer="id_4" onclick="checkClick()" id="id_1"></button>
+            <label for="id_1">make a turn</label><br />
+            <button class="q" data-answer="id_4" onclick="checkClick()" id="id_2"></button>
+            <label for="id_2">speed up their vehicles</label><br />
+            <button class="q" data-answer="id_4" onclick="checkClick()" id="id_3"></button>
+            <label for="id_3">stop or slow down their vehicles</label><br />
+            <button class="q correct_answer" data-answer="id_4" onclick="checkClick()" id="id_4"></button>
+            <label for="id_4">do any of these</label>
+
+            <div id="correct_1" class="correct hidden"> Correct!</div>
+            <div id="comment_1" class="comment hidden">
+                <span>!</span> In collision situations, drivers must follow three possible options: slow down or stop their vehicle, take an immediate turn,
+                or speed up their vehicle if it is safe to do so.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_21" id="q_2">
+            <p>
+                <span id="sp">2.</span> When there are three or more lanes going in one direction on a highway, fast-moving vehicles should use
+            </p>
+            <button class="q correct_answer" data-answer="id_21" onclick="checkClick()" id="id_21"></button>
+            <label for="id_21">the middle lane</label><br />
+            <button class="q" data-answer="id_21" onclick="checkClick()" id="id_22"></button>
+            <label for="id_22">the right lane</label><br />
+            <button class="q" data-answer="id_21" onclick="checkClick()" id="id_23"></button>
+            <label for="id_23">the shoulder</label><br />
+            <button class="q" data-answer="id_21" onclick="checkClick()" id="id_24"></button>
+            <label for="id_24">the deceleration lane</label>
+
+            <div id="correct_2" class="correct hidden"> Correct!</div>
+            <div id="comment_2" class="comment hidden">
+                <span>!</span> On roads with more than two lanes traveling in the same direction,
+                use the right lane for slower speeds, the middle lanes for higher speeds,
+                and the left-hand lane for passing only.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_34" id="q_3">
+            <p>
+             <span id="sp">3.</span> You may not pass another vehicle except
+            </p>
+            <button class="q" data-answer="id_34" onclick="checkClick()" id="id_31"></button>
+            <label for="31">when there is a school bus on the same roadway with flashing lights</label><br />
+            <button class="q" data-answer="id_34" onclick="checkClick()" id="id_32"></button>
+            <label for="id_32">when you are within 100 feet of a railroad crossing</label><br />
+            <button class="q" data-answer="id_34" onclick="checkClick()" id="id_33"></button>
+            <label for="id_33">on the right shoulder of the highway</label><br />
+            <button class="q correct_answer" data-answer="id_34" onclick="checkClick()" id="id_34"></button>
+            <label for="id_34">when your lane is separated by a broken yellow line</label>
+
+            <div id="correct_3" class="correct hidden"> Correct!</div>
+            <div id="comment_3" class="comment hidden">
+                <span>!</span> When there is a broken yellow line next to your lane, you are allowed to pass.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_44" id="q_4">
+            <p>
+                <span id="sp">4.</span>  On a two-way roadway with a center lane, drivers from either direction can make _________ from the center lane.
+            </p>
+            <button class="q" data-answer="id_44" onclick="checkClick()" id="id_41"></button>
+            <label for="id_41">frequent stops</label><br />
+            <button class="q" data-answer="id_44" onclick="checkClick()" id="id_42"></button>
+            <label for="id_42">right turns</label><br />
+            <button class="q" data-answer="id_44" onclick="checkClick()" id="id_43"></button>
+            <label for="id_43">U-turns</label><br />
+            <button class="q check_answer" data-answer="id_44" onclick="checkClick()" id="id_44"></button>
+            <label for="id_44">left turns</label>
+
+            <div id="correct_4" class="correct hidden"> Correct!</div>
+            <div id="comment_4" class="comment hidden">
+                <span>!</span> Drivers from either direction may use the center lane for left turns.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_53" id="q_5">
+            <p>
+                <span id="sp">5.</span> If you accidentally pass your exit on an expressway, you must
+            </p>
+            <button class="q" data-answer="id_53" onclick="checkClick()" id="id_51"></button>
+            <label for="id_51">back up and return to the exit</label><br />
+            <button class="q" data-answer="id_53" onclick="checkClick()" id="id_52"></button>
+            <label for="id_52">make a U-turn and return to the exit</label><br />
+            <button class="q" data-answer="id_53" onclick="checkClick()" id="id_53"></button>
+            <label for="id_53">continue to the next exit</label><br />
+            <button class="q check_answer" data-answer="id_53" onclick="checkClick()" id="id_54"></button>
+            <label for="id_54">reduce your speed and move into the rightmost lane</label>
+
+            <div id="correct_5" class="correct hidden"> Correct!</div>
+            <div id="comment_5" class="comment hidden">
+                <span>!</span> When leaving an expressway, if you go past your exit, you must go on to the next exit. Backing up on expressways is against the law.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_64" id="q_6">
+            <p>
+                <span id="sp">6.</span>  _________ are designed to allow vehicles to slow down and leave the expressways.
+            </p>
+            <button class="q" data-answer="id_54" onclick="checkClick()" id="id_61"></button>
+            <label for="id_61">turnpikes</label><br />
+            <button class="q" data-answer="id_64" onclick="checkClick()" id="id_62"></button>
+            <label for="id_62">roundabouts</label><br />
+            <button class="q" data-answer="id_64" onclick="checkClick()" id="id_63"></button>
+            <label for="id_63">acceleration lanes</label><br />
+            <button class="q check_answer" data-answer="id_64" onclick="checkClick()" id="id_64"></button>
+            <label for="id_64">exit ramps</label>
+
+            <div id="correct_6" class="correct hidden"> Correct!</div>
+            <div id="comment_6" class="comment hidden">
+                <span>!</span> Exit ramps are designed for vehicles to slow down and leave the expressways. There is often a lower speed posted for the ramp.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_73" id="q_7">
+            <p>
+                <span id="sp">7.</span> Which of the following statements is NOT correct?
+            </p>
+            <button class="q" data-answer="id_73" onclick="checkClick()" id="id_71"></button>
+            <label for="id_71">motorcycles are entitled to the same full lane width as other vehicles</label><br />
+            <button class="q" data-answer="id_73" onclick="checkClick()" id="id_72"></button>
+            <label for="id_72">when driving around bicycles, increase your following distance</label><br />
+            <button class="q" data-answer="id_73" onclick="checkClick()" id="id_73"></button>
+            <label for="id_73">bicycles and motorcycles move slower and stop slower than expected</label><br />
+            <button class="q check_answer" data-answer="id_73" onclick="checkClick()" id="id_74"></button>
+            <label for="id_74">never move beside a motorcycle in the same lane</label>
+
+            <div id="correct_7" class="correct hidden"> Correct!</div>
+            <div id="comment_7" class="comment hidden">
+                <span>!</span> Never move beside a motorcycle in the same lane.Bicycles and motorcycles are smaller, harder to see and 
+                               can move/stop faster than expected.
+            </div>
+       </div>
+
+        <div class="list hidden" data-answer="id_83" id="q_8">
+            <p>
+                <span id="sp">8.</span> In a roundabout intersection, drivers must _________, whether they need to make a right turn, a left turn, a U-turn or continue forward.
+            </p>
+            <button class="q" data-answer="id_83" onclick="checkClick()" id="id_81"></button>
+            <label for="id_81">turn left and merge into the circle</label><br />
+            <button class="q" data-answer="id_83" onclick="checkClick()" id="id_82"></button>
+            <label for="id_82">turn left and then turn right</label><br />
+            <button class="q" data-answer="id_83" onclick="checkClick()" id="id_83"></button>
+            <label for="id_83">turn right and merge into the circle</label><br />
+            <button class="q check_answer" data-answer="id_83" onclick="checkClick()" id="id_84"></button>
+            <label for="id_84">turn right and then turn left</label>
+
+            <div id="correct_8" class="correct hidden"> Correct!</div>
+            <div id="comment_8" class="comment hidden">
+                <span>!</span> A roundabout is a one-way circular intersection where you must always turn right to make any type of turn. In a roundabout intersection, all drivers must yield the right-of-way to vehicles that are already in the circle.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_94" id="q_9">
+            <p>
+                <span id="sp">9.</span> When you are moving through an intersection with a green signal and a pedestrian starts to cross in your path against the red signal, the first thing to do is
+            </p>
+            <button class="q" data-answer="id_94" onclick="checkClick()" id="id_91"></button>
+            <label for="id_91">confront the pedestrian</label><br />
+            <button class="q" data-answer="id_94" onclick="checkClick()" id="id_92"></button>
+            <label for="id_92">let him/her cross the intersection</label><br />
+            <button class="q" data-answer="id_94" onclick="checkClick()" id="id_93"></button>
+            <label for="id_93">stop your vehicle and allow the pedestrian to cross</label><br />
+            <button class="q check_answer" data-answer="id_94" onclick="checkClick()" id="id_94"></button>
+            <label for="id_94">give a warning with your horn</label>
+
+            <div id="correct_9" class="correct hidden"> Correct!</div>
+            <div id="comment_9" class="comment hidden">
+                <span>!</span> If you are moving through an intersection with a green signal and a pedestrian starts to cross in your path against the red signal, give a warning with your horn. If the pedestrian does not stop, the driver must stop.
+            </div>
+        </div>
+        
+        <div class="list hidden" data-answer="id_104" id="q_10">
+            <p>
+                <span id="sp">10.</span> Before reaching the crest of a hill or entering a curve, you must _________ and watch for oncoming vehicles.
+            </p>
+            <button class="q" data-answer="id_104" onclick="checkClick()" id="id_101"></button>
+            <label for="id_101">speed up, change gears</label><br />
+            <button class="q" data-answer="id_104" onclick="checkClick()" id="id_102"></button>
+            <label for="id_102">speed up, turn on the headlights</label><br />
+            <button class="q" data-answer="id_104" onclick="checkClick()" id="id_103"></button>
+            <label for="id_103">slow down, move to the left side of the road</label><br />
+            <button class="q check_answer" data-answer="id_104" onclick="checkClick()" id="id_104"></button>
+            <label for="id_104">slow down, move to the right side of the road</label>
+
+            <div id="correct_10" class="correct hidden"> Correct!</div>
+            <div id="comment_10" class="comment hidden">
+                <span>!</span> Hills and curves on rural roads are often steeper and sharper than on highways. Before reaching the crest of a hill or before entering a curve, slow down, move to the right side of the road, and watch for oncoming vehicles.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_111" id="q_11">
+            <p>
+                <span id="sp">11.</span>  If you approach a person (who is about to cross the road) walking with a white cane, or a white cane tipped with red, you must
+             </p>
+            <button class="q" data-answer="id_111" onclick="checkClick()" id="id_111"></button>
+            <label for="id_111">stop</label><br />
+            <button class="q" data-answer="id_111" onclick="checkClick()" id="id_112"></button>
+            <label for="id_112">use your horn</label><br />
+            <button class="q" data-answer="id_111" onclick="checkClick()" id="id_113"></button>
+            <label for="id_113">take a detour</label><br />
+            <button class="q check_answer" data-answer="id_111" onclick="checkClick()" id="id_114"></button>
+            <label for="id_114">go slow</label>
+
+            <div id="correct_11" class="correct hidden"> Correct!</div>
+            <div id="comment_11" class="comment hidden">
+                <span>!</span> Hills and curves on rural roads are often steeper and sharper than on highways. Before reaching the crest of a hill or before entering a curve, slow down, move to the right side of the road, and watch for oncoming vehicles.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_123" id="q_12">
+            <p>
+                <span id="sp">12.</span>  Marijuana could impair your driving abilities for up to
+            </p>
+            <button class="q" data-answer="id_123" onclick="checkClick()" id="id_121"></button>
+            <label for="id_121">2.5 hours</label><br />
+            <button class="q" data-answer="id_123" onclick="checkClick()" id="id_122"></button>
+            <label for="id_122">1 hour</label><br />
+            <button class="q" data-answer="id_123" onclick="checkClick()" id="id_123"></button>
+            <label for="id_123">5 hours</label><br />
+            <button class="q check_answer" data-answer="id_123" onclick="checkClick()" id="id_124"></button>
+            <label for="id_124">10 hours</label>
+
+            <div id="correct_12" class="correct hidden"> Correct!</div>
+            <div id="comment_12" class="comment hidden">
+                <span>!</span> Marijuana has been shown to impair performance on driving tasks for up to 5 hours.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_132" id="q_13">
+            <p>
+                <span id="sp">13.</span>  A solid white line between lanes of traffic means
+            </p>
+            <button class="q" data-answer="id_132" onclick="checkClick()" id="id_131"></button>
+            <label for="id_131">you may cross it to change lanes if it is safe to do so</label><br />
+            <button class="q" data-answer="id_132" onclick="checkClick()" id="id_132"></button>
+            <label for="id_132">you should stay in your lane</label><br />
+            <button class="q" data-answer="id_132" onclick="checkClick()" id="id_133"></button>
+            <label for="id_133">you should reduce your speed</label><br />
+            <button class="q check_answer" data-answer="id_132" onclick="checkClick()" id="id_134"></button>
+            <label for="id_134">you are allowed to make a U-turn</label>
+
+            <div id="correct_13" class="correct hidden"> Correct!</div>
+            <div id="comment_13" class="comment hidden">
+                <span>!</span> A solid white line between lanes of traffic means that drivers should stay in their lane. Drivers should not cross the lanes unless a special situation requires them to change lanes.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_141" id="q_14">
+            <p>
+                <span id="sp">14.</span>  When turning left from a two-way street onto a one-way street, you must
+            </p>
+            <button class="q" data-answer="id_141" onclick="checkClick()" id="id_141"></button>
+            <label for="id_141">begin the turn with your left wheel as close as possible to the yellow dividing line</label><br />
+            <button class="q" data-answer="id_141" onclick="checkClick()" id="id_142"></button>
+            <label for="id_142">swing wide to the left before turning</label><br />
+            <button class="q" data-answer="id_141" onclick="checkClick()" id="id_143"></button>
+            <label for="id_143">begin the turn with your right wheel as close as possible to the yellow dividing line</label><br />
+            <button class="q check_answer" data-answer="id_141" onclick="checkClick()" id="id_144"></button>
+            <label for="id_144">do any of the above</label>
+
+            <div id="correct_14" class="correct hidden"> Correct!</div>
+            <div id="comment_14" class="comment hidden">
+                <span>!</span> When turning left from a two-way street onto a one-way street, begin the turn with your left wheel as close as possible to the yellow dividing line.
+            </div>
+        </div>
+
+        <div class="list hidden" data-answer="id_154" id="q_15">
+            <p>
+                <span id="sp">15.</span>   If a driver behind you repeatedly flashes his/her headlights, you should
+            </p>
+            <button class="q" data-answer="id_154" onclick="checkClick()" id="id_151"></button>
+            <label for="id_151">increase your vehicle speed and move ahead</label><br />
+            <button class="q" data-answer="id_154" onclick="checkClick()" id="id_152"></button>
+            <label for="id_152">switch on your low-beam lights</label><br />
+            <button class="q" data-answer="id_154" onclick="checkClick()" id="id_153"></button>
+            <label for="id_153">switch on your high-beam lights</label><br />
+            <button class="q check_answer" data-answer="id_154" onclick="checkClick()" id="id_154"></button>
+            <label for="id_154">get out of the way</label>
+
+            <div id="correct_15" class="correct hidden"> Correct!</div>
+            <div id="comment_15" class="comment hidden">
+                <span>!</span> Aggressive driving is the operation of a motor vehicle in a manner that endangers or is likely to endanger persons or property. If you notice a driver behind you repeatedly flashing their headlights, you should not retaliate or in any way engage the other driver. Get out of the way.
+            </div>
+        </div>
+
+
+        <div class="hidden my_result" id="one">
+            <img src="https://img.icons8.com/android/96/000000/walking.png">
+            <br />
+            <br />
+            <b>Result: </b> 
+            <br />
+            <br />
+            Maybe it's better for you to be a pedestrian?
+            
+        </div>
+        <div class="hidden my_result" id="two">
+             <img src="https://img.icons8.com/android/96/000000/cycling-road.png">
+            <br />
+            <br />
+            <b>Result: </b>
+            <br />
+            <br />
+            You are good for riding a bike, but it is early for driving a car.
+            
+        </div>
+        <div class="hidden my_result" id="three">
+            <img src="https://img.icons8.com/material-rounded/96/000000/cottage.png">  
+            <br />
+            <br />
+            <b>Result: </b>
+            <br />
+            <br />
+            Please, say me when you will drive, I will stay at home.
+            
+        </div>
+        <div class="hidden my_result" id="four">
+            <img src="https://img.icons8.com/windows/96/000000/up-right-arrow.png">
+            <br />
+            <br />
+            <b>Result: </b>
+            <br />
+            <br />
+            The main thing is to not give up, and you can be a driver.
+           
+        </div>
+        <div class="hidden my_result" id="five">
+            <img src="https://img.icons8.com/ios/96/000000/car-filled.png">
+            <br />
+            <br />
+            <b>Result: </b>
+            <br />
+            <br />
+            Driver license is almost yours.
+           
+        </div>
+        <div class="hidden my_result" id="six">
+           <img src="https://img.icons8.com/wired/64/000000/facebook-like.png">
+            <br />
+            <br />
+            <b>Result: </b>
+            <br />
+            <br />
+            This is a great result ! But to get a real driver license, you need to answer at least 32 from 40 questions correctly.
+           
+        </div>
+
+  
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            var count_corect =0;
+            var question = 0;
+            var listener = [];
+            var name_res = "";
+
+            function checkClick()
+            {
+                if (listener.length == 0) {
+                    listener.push(event.srcElement.id);
+                    document.getElementById(event.srcElement.id).style.color = "black";
+                    document.getElementById(event.srcElement.id).style.backgroundColor = "black";
+                }
+                else {
+                    var temp = listener[0];
+                    listener[0] = event.srcElement.id;
+                    document.getElementById(temp).style.backgroundColor = "buttonface";
+                    document.getElementById(event.srcElement.id).style.backgroundColor = "black";
+                    //alert("фон должен быть красный новой кнопки перед этим" + listener[0]);
+                }
+            }
+
+            function submit() {
+
+                if (listener.length == 0 || listener[0] == null) {
+                    alert("Select your answer first!")
+                }
+                else {
+                    question++;
+                    var your_answer = listener[0];
+                    var correct = document.getElementById(your_answer);
+                    listener[0] = null;
+
+                    if (your_answer == correct.getAttribute("data-answer")) {
+                        //alert("Correct!");
+
+                        // document.getElementById(temp).style.color = "buttontext";
+                        document.getElementById(your_answer).style.backgroundColor = "#669900";
+
+                        document.getElementById("correct_"+ question).classList.remove('hidden');
+                        document.getElementById("correct_"+ question).classList.add('show');
+                        count_corect=count_corect+ 1;
+                        chengeColorBox("#669900");
+
+                    }
+                    else {
+                        // alert("Wrong!");
+                        document.getElementById(your_answer).style.backgroundColor = "#CC3300";
+                        document.getElementById(correct.getAttribute("data-answer")).style.backgroundColor = "#669900";
+                        document.getElementById("comment_" + question).classList.remove('hidden');
+                        document.getElementById("comment_" + question).classList.add('show');
+                        chengeColorBox("#CC3300");
+                    }
+
+                    if(question+1==16)
+                    {
+
+                        //document.getElementById("next_but").classList.add('hidden');
+                        document.getElementById("next").classList.add('hidden');
+                        document.getElementById("result").classList.remove('hidden');
+                        document.getElementById("result").classList.add('show');
+                        document.getElementById("sub").classList.remove('show');
+                        document.getElementById("sub").classList.add('hidden');
+                       
+                    }
+                }
+                function chengeColorBox(newcolor) {
+
+                    document.getElementById("box_" + question).style.backgroundColor = newcolor;
+                }
+            }
+
+            function hideResult(){
+                document.getElementById("comment_15").classList.remove('show');
+                document.getElementById("comment_15").classList.add('hidden');
+                document.getElementById("correct_15").classList.remove('show');
+                document.getElementById("correct_15").classList.add('hidden');
+                document.getElementById("q_15").classList.remove('show');
+                document.getElementById("q_15").classList.add('hidden');
+
+                document.getElementById("retake").classList.remove('show');
+                document.getElementById("retake").classList.add('hidden');
+
+                showScore(count_corect);
+
+
+                if (count_corect >= 0 && count_corect <= 4) {
+                    document.getElementById("one").classList.remove('show');
+                    document.getElementById("one").classList.add('hidden');
+                    name_res = "one";
+                }
+                if (count_corect >= 5 && count_corect <= 7) {
+                    document.getElementById("two").classList.remove('show');
+                    document.getElementById("two").classList.add('hidden');
+                    name_res = "two";
+                }
+                if (count_corect >= 8 && count_corect <= 10) {
+                    document.getElementById("three").classList.remove('show');
+                    document.getElementById("three").classList.add('hidden');
+                    name_res = "three";
+                }
+                if (count_corect >= 11 && count_corect <= 12) {
+                    document.getElementById("four").classList.remove('show');
+                    document.getElementById("four").classList.add('hidden');
+                    name_res = "four";
+                }
+                if (count_corect >= 13 && count_corect <= 14) {
+                    document.getElementById("five").classList.remove('show');
+                    document.getElementById("five").classList.add('hidden');
+                    name_res = "five";
+                }
+                if (count_corect == 15) {
+                    document.getElementById("six").classList.remove('show');
+                    document.getElementById("six").classList.add('hidden');
+                    name_res = "six";
+                }
+            }
+
+            function getResult()
+            {
+                document.getElementById("comment_15").classList.remove('show');
+                document.getElementById("comment_15").classList.add('hidden');
+                document.getElementById("correct_15").classList.remove('show');
+                document.getElementById("correct_15").classList.add('hidden');
+                document.getElementById("q_15").classList.remove('show');
+                document.getElementById("q_15").classList.add('hidden');
+              
+                document.getElementById("retake").classList.remove('hidden');
+                document.getElementById("retake").classList.add('show');
+
+                document.getElementById("result").classList.remove('show');
+                document.getElementById("result").classList.add('hidden');
+
+                showScore(count_corect);
+               
+
+                if(count_corect>=0 &&count_corect<=4)
+                {
+                    document.getElementById("one").classList.remove('hidden');
+                    document.getElementById("one").classList.add('show');
+                    name_res = "one";
+                }
+                if (count_corect >= 5 && count_corect <= 7) {
+                    document.getElementById("two").classList.remove('hidden');
+                    document.getElementById("two").classList.add('show');
+                    name_res = "two";
+                }
+                if (count_corect >= 8 && count_corect <= 10) {
+                    document.getElementById("three").classList.remove('hidden');
+                    document.getElementById("three").classList.add('show');
+                    name_res = "three";
+                }
+                if (count_corect >= 11 && count_corect <= 12) {
+                    document.getElementById("four").classList.remove('hidden');
+                    document.getElementById("four").classList.add('show');
+                    name_res = "four";
+                }
+                if (count_corect >= 13 && count_corect <= 14) {
+                    document.getElementById("five").classList.remove('hidden');
+                    document.getElementById("five").classList.add('show');
+                    name_res = "five";
+                }
+                if (count_corect ==15) {
+                    document.getElementById("six").classList.remove('hidden');
+                    document.getElementById("six").classList.add('show');
+                    name_res = "six";
+                }
+            }
+
+       
+            function showScore(count_corect) {
+                document.getElementById(count_corect).classList.remove('hidden');
+               
+            }
+           
+            function goNext() {
+      
+                document.getElementById("comment_"+question).classList.remove('show');
+                document.getElementById("comment_" + question).classList.add('hidden');
+                document.getElementById("correct_" + question).classList.remove('show');
+                document.getElementById("correct_" + question).classList.add('hidden');
+
+                document.getElementById("q_" + question).classList.remove('show');
+                document.getElementById("q_" + question).classList.add('hidden');
+
+                document.getElementById("q_" + (question + 1)).classList.remove('hidden');
+                document.getElementById("q_" + (question + 1)).classList.add('show');
+
+                /*if (listener.length != 0) {
+                    var temp = listener[0];
+                    document.getElementById(temp).style.backgroundColor = "buttonface";
+                }*/
+
+                listener = [];
+            }
+            function closeScore(count_corect) {
+                document.getElementById(count_corect).classList.remove('show');
+                document.getElementById(count_corect).classList.add('hidden');
+            }
+            
+            function getNewTest()
+            {
+                document.getElementById("retake").classList.remove('show');
+                document.getElementById("retake").classList.add('hidden');
+               
+                document.getElementById(name_res).classList.remove('show');
+                document.getElementById(name_res).classList.add('hidden');
+
+                document.getElementById("q_1").classList.remove('hidden');
+                document.getElementById("q_1").classList.add('show');
+
+               
+
+                closeScore(count_corect);
+
+                count_corect = 0;
+                question = 0;
+                listener = [];
+                name_res = "";
+
+          
+
+                document.getElementById("sub").classList.remove('hidden');
+                document.getElementById("sub").classList.add('show');
+                document.getElementById("next").classList.add('show');
+                document.getElementById("next").classList.remove('hidden');
+
+                cleanAll();
+                
+            }
+
+            function cleanAll() {
+                $(".cur_number").each(function (i) {
+                    this.style.backgroundColor = "#e4d8dd";
+                });
+
+                $(".q").each(function (i) {
+                    this.style.backgroundColor = "buttonface";
+                });
+
+            }
+
+        </script>
+
+    </section>
+</body>
+</html>
